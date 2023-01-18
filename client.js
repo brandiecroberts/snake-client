@@ -9,6 +9,25 @@ const connect = function() {
     console.log('Successfully connected to the game server');
     conn.write('Name: BCR');
   });
+
+  // conn.on("connect", () => {
+  //   setTimeout(() => {
+  //     conn.write('Move: up');
+  //   });
+   
+  //   setTimeout(() => {
+  //     conn.write('Move: down');
+  //   }, 50);
+
+  //   setTimeout(() => {
+  //     conn.write('Move: left');
+  //   }, 100);
+
+  //   setTimeout(() => {
+  //     conn.write('Move: right');
+  //   }, 150);
+  // });
+
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
