@@ -1,4 +1,8 @@
+// const myClient = ("../client");
+// // console.log(myClient);
+
 const net = require("net");
+// const client = require('../client');
 
 // establishes a connection with the game server
 const connect = function() {
@@ -10,10 +14,10 @@ const connect = function() {
   });
   // interpret incoming data as text
   conn.setEncoding("utf8");
-  conn.on("connect", () => {
+  
+  conn.on("data", (data) => {
     // code that does something when the connection is first established
-    let connect = 'you ded cuz you idled';
-    console.log(connect);
+    console.log(data);
   });
   
   return conn;
